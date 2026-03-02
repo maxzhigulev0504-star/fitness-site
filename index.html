@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #111;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #111);
     color: white;
     text-align: center;
 }
@@ -33,9 +33,10 @@ nav a:hover {
     color: red;
 }
 
-/* ===== HERO БЛОК ===== */
+/* ===== HERO ===== */
 .hero {
     padding: 100px 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero h1 {
@@ -79,11 +80,32 @@ nav a:hover {
     width: 250px;
     border-radius: 10px;
     transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: fadeIn 2s ease-in-out;
 }
 
 .card:hover {
     transform: translateY(-10px);
     background: #333;
+}
+
+/* ===== ФУТЕР ===== */
+footer {
+    background: black;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* ===== АНИМАЦИЯ ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 
@@ -118,6 +140,10 @@ nav a:hover {
         <p>Поддержка 24/7</p>
     </div>
 </div>
+
+<footer>
+    <p>© 2026 Fitness Pro | Все права защищены</p>
+</footer>
 
 </body>
 </html>
