@@ -89,6 +89,32 @@ nav a:hover {
     background: #333;
 }
 
+/* ===== ФОРМА ===== */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
 /* ===== ФУТЕР ===== */
 footer {
     background: black;
@@ -140,6 +166,16 @@ footer {
         <p>Поддержка 24/7</p>
     </div>
 </div>
+
+<section style="margin:80px 20px;">
+    <h2>Записаться на тренировку</h2>
+
+    <form>
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="Ваш телефон" required>
+        <button type="submit">Отправить заявку</button>
+    </form>
+</section>
 
 <footer>
     <p>© 2026 Fitness Pro | Все права защищены</p>
