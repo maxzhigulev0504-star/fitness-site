@@ -8,33 +8,85 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: #111;
     color: white;
     text-align: center;
 }
 
+/* ===== МЕНЮ ===== */
 nav {
     background: black;
-    padding: 15px;
+    padding: 20px;
 }
 
 nav a {
     color: white;
-    margin: 15px;
+    margin: 20px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: red;
 }
 
-h1 {
-    margin-top: 60px;
-    font-size: 40px;
+/* ===== HERO БЛОК ===== */
+.hero {
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: darkred;
+    transform: scale(1.1);
+}
+
+/* ===== КАРТОЧКИ ===== */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #222;
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #333;
 }
 </style>
+
 </head>
 
 <body>
@@ -44,8 +96,28 @@ h1 {
     <a href="about.html">Обо мне</a>
 </nav>
 
-<h1>Добро пожаловать в Fitness Pro 💪</h1>
-<p>Это мой профессиональный сайт</p>
+<div class="hero">
+    <h1>Стань сильнее уже сегодня 💪</h1>
+    <p>Персональные тренировки и программы питания</p>
+    <a href="about.html" class="btn">Записаться</a>
+</div>
+
+<div class="services">
+    <div class="card">
+        <h3>Персональные тренировки</h3>
+        <p>Индивидуальный подход и быстрый результат</p>
+    </div>
+
+    <div class="card">
+        <h3>Программа питания</h3>
+        <p>Питание под твою цель</p>
+    </div>
+
+    <div class="card">
+        <h3>Онлайн сопровождение</h3>
+        <p>Поддержка 24/7</p>
+    </div>
+</div>
 
 </body>
 </html>
