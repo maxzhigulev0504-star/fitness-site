@@ -3,182 +3,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fitness Pro</title>
+<title>Клубника в шоколаде</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #111);
-    color: white;
-    text-align: center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#2b0b13,#4d0f1f,#1a050a);
+color:white;
 }
 
 /* ===== МЕНЮ ===== */
-nav {
-    background: black;
-    padding: 20px;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(0,0,0,0.8);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-nav a {
-    color: white;
-    margin: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.3s;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-weight:600;
+transition:0.3s;
 }
 
-nav a:hover {
-    color: red;
+nav a:hover{
+color:#ff4d6d;
 }
 
 /* ===== HERO ===== */
-.hero {
-    padding: 100px 20px;
-    animation: fadeIn 1.5s ease-in-out;
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+animation:fadeUp 1s ease forwards;
 }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
+.hero p{
+font-size:20px;
+opacity:0.8;
+margin-bottom:30px;
+animation:fadeUp 1.5s ease forwards;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 35px;
-    background: red;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-    transition: 0.3s;
+.btn{
+padding:15px 40px;
+border-radius:50px;
+background:linear-gradient(45deg,#ff4d6d,#ff758f);
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.4s;
+box-shadow:0 0 20px rgba(255,0,60,0.5);
 }
 
-.btn:hover {
-    background: darkred;
-    transform: scale(1.1);
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 40px rgba(255,0,60,0.8);
 }
 
-/* ===== КАРТОЧКИ ===== */
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 60px 20px;
-    flex-wrap: wrap;
+/* ===== ПРОДУКТЫ ===== */
+.products{
+padding:100px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
 }
 
-.card {
-    background: #222;
-    padding: 30px;
-    width: 250px;
-    border-radius: 10px;
-    transition: 0.3s;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    animation: fadeIn 2s ease-in-out;
+.card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:0.4s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    background: #333;
+.card:hover{
+transform:translateY(-15px);
+background:rgba(255,255,255,0.1);
+}
+
+.price{
+margin-top:15px;
+font-weight:bold;
+color:#ff8fa3;
+}
+
+/* ===== ПРЕИМУЩЕСТВА ===== */
+.advantages{
+padding:100px 10%;
+text-align:center;
+}
+
+.advantages h2{
+margin-bottom:50px;
+font-size:35px;
+}
+
+.advantages div{
+margin-bottom:20px;
+opacity:0.8;
+}
+
+/* ===== ОТЗЫВЫ ===== */
+.reviews{
+padding:100px 10%;
+background:rgba(0,0,0,0.5);
+text-align:center;
+}
+
+.review{
+margin-bottom:40px;
 }
 
 /* ===== ФОРМА ===== */
-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: none;
+.order{
+padding:100px 10%;
+text-align:center;
 }
 
-form button {
-    width: 100%;
-    padding: 15px;
-    background: red;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+form{
+max-width:400px;
+margin:40px auto;
 }
 
-form button:hover {
-    background: darkred;
-    transform: scale(1.05);
+form input{
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:none;
+border-radius:50px;
+}
+
+form button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:50px;
+background:#ff4d6d;
+color:white;
+font-weight:bold;
+cursor:pointer;
 }
 
 /* ===== ФУТЕР ===== */
-footer {
-    background: black;
-    padding: 20px;
-    margin-top: 60px;
+footer{
+padding:40px;
+text-align:center;
+background:black;
+opacity:0.6;
 }
 
 /* ===== АНИМАЦИЯ ===== */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ===== МОБИЛКА ===== */
+@media(max-width:768px){
+.hero h1{
+font-size:35px;
+}
+nav{
+flex-direction:column;
+}
+nav div{
+margin-top:15px;
+}
 }
 </style>
-
 </head>
 
 <body>
 
 <nav>
-    <a href="index.html">Главная</a>
-    <a href="about.html">Обо мне</a>
+<div><strong>🍓 SweetBerry</strong></div>
+<div>
+<a href="#">Главная</a>
+<a href="#products">Каталог</a>
+<a href="#order">Заказать</a>
+</div>
 </nav>
 
-<div class="hero">
-    <h1>Стань сильнее уже сегодня 💪</h1>
-    <p>Персональные тренировки и программы питания</p>
-    <a href="about.html" class="btn">Записаться</a>
+<section class="hero">
+<h1>Клубника в шоколаде</h1>
+<p>Свежесть, стиль и вкус в каждом наборе</p>
+<a href="#order" class="btn">Заказать сейчас</a>
+</section>
+
+<section class="products" id="products">
+<div class="card">
+<h3>Набор 6 шт</h3>
+<p>Идеально для подарка</p>
+<div class="price">1500 ₽</div>
 </div>
 
-<div class="services">
-    <div class="card">
-        <h3>Персональные тренировки</h3>
-        <p>Индивидуальный подход и быстрый результат</p>
-    </div>
-
-    <div class="card">
-        <h3>Программа питания</h3>
-        <p>Питание под твою цель</p>
-    </div>
-
-    <div class="card">
-        <h3>Онлайн сопровождение</h3>
-        <p>Поддержка 24/7</p>
-    </div>
+<div class="card">
+<h3>Набор 12 шт</h3>
+<p>Самый популярный</p>
+<div class="price">2500 ₽</div>
 </div>
 
-<section style="margin:80px 20px;">
-    <h2>Записаться на тренировку</h2>
+<div class="card">
+<h3>Премиум набор</h3>
+<p>С декором и посыпкой</p>
+<div class="price">3500 ₽</div>
+</div>
+</section>
 
-    <form>
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="tel" placeholder="Ваш телефон" required>
-        <button type="submit">Отправить заявку</button>
-    </form>
+<section class="advantages">
+<h2>Почему выбирают нас?</h2>
+<div>✔ Только свежая клубника</div>
+<div>✔ Бельгийский шоколад</div>
+<div>✔ Доставка в день заказа</div>
+<div>✔ Красивое подарочное оформление</div>
+</section>
+
+<section class="reviews">
+<h2>Отзывы клиентов</h2>
+<div class="review">⭐⭐⭐⭐⭐ Очень вкусно и красиво! — Анна</div>
+<div class="review">⭐⭐⭐⭐⭐ Заказывала на день рождения — все в восторге! — Мария</div>
+</section>
+
+<section class="order" id="order">
+<h2>Оформить заказ</h2>
+<form>
+<input type="text" placeholder="Ваше имя" required>
+<input type="tel" placeholder="Ваш телефон" required>
+<button type="submit">Отправить заказ</button>
+</form>
 </section>
 
 <footer>
-    <p>© 2026 Fitness Pro | Все права защищены</p>
+© 2026 SweetBerry | Сделано с любовью 🍓
 </footer>
 
 </body>
