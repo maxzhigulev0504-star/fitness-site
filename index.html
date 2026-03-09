@@ -58,7 +58,7 @@ transform:scale(1.2);
 
 .hero{
 text-align:center;
-padding:120px 20px;
+padding:100px 20px;
 }
 
 .hero h1{
@@ -78,7 +78,7 @@ padding:60px 20px;
 
 .card{
 background:#2a1015;
-padding:30px;
+padding:20px;
 border-radius:15px;
 width:220px;
 text-align:center;
@@ -89,10 +89,17 @@ transition:0.3s;
 transform:translateY(-10px);
 }
 
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
 .price{
 color:#ff8fa3;
 margin-top:10px;
 font-weight:bold;
+font-size:18px;
 }
 
 </style>
@@ -113,9 +120,7 @@ font-weight:bold;
 <div class="languages">
 
 <img src="https://flagcdn.com/w40/ru.png" class="flag" onclick="setLanguage('ru')">
-
 <img src="https://flagcdn.com/w40/gb.png" class="flag" onclick="setLanguage('en')">
-
 <img src="https://flagcdn.com/w40/ee.png" class="flag" onclick="setLanguage('ee')">
 
 </div>
@@ -132,18 +137,33 @@ font-weight:bold;
 <section class="products" id="products">
 
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c">
+
 <h3 id="p1">Набор 6 шт</h3>
-<div class="price">1500 ₽</div>
+
+<div class="price">15 €</div>
+
 </div>
 
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1612197529155-0d9dba0f90ad">
+
 <h3 id="p2">Набор 12 шт</h3>
-<div class="price">2500 ₽</div>
+
+<div class="price">25 €</div>
+
 </div>
 
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+
 <h3 id="p3">Премиум набор</h3>
-<div class="price">3500 ₽</div>
+
+<div class="price">35 €</div>
+
 </div>
 
 </section>
