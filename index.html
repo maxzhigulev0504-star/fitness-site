@@ -7,16 +7,24 @@
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
 font-family:Arial;
-margin:0;
 background:#1a0b0f;
 color:white;
 }
 
+/* меню */
+
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 10%;
 background:#12070a;
 }
@@ -25,18 +33,40 @@ nav a{
 color:white;
 text-decoration:none;
 margin-left:20px;
+font-weight:bold;
 }
 
-.languages button{
-margin-left:10px;
-padding:5px 10px;
-cursor:pointer;
+/* флаги */
+
+.languages{
+display:flex;
+gap:10px;
 }
+
+.flag{
+width:35px;
+cursor:pointer;
+border-radius:4px;
+transition:0.3s;
+}
+
+.flag:hover{
+transform:scale(1.2);
+}
+
+/* главный блок */
 
 .hero{
 text-align:center;
 padding:120px 20px;
 }
+
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+/* товары */
 
 .products{
 display:flex;
@@ -49,17 +79,24 @@ padding:60px 20px;
 .card{
 background:#2a1015;
 padding:30px;
-border-radius:10px;
-width:200px;
+border-radius:15px;
+width:220px;
 text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
 }
 
 .price{
 color:#ff8fa3;
 margin-top:10px;
+font-weight:bold;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -69,14 +106,18 @@ margin-top:10px;
 <div>🍓 SweetBerry</div>
 
 <div>
-<a href="#" data-lang="home">Главная</a>
-<a href="#products" data-lang="catalog">Каталог</a>
+<a href="#" id="home">Главная</a>
+<a href="#products" id="catalog">Каталог</a>
 </div>
 
 <div class="languages">
-<button onclick="setLanguage('ru')">RU</button>
-<button onclick="setLanguage('en')">EN</button>
-<button onclick="setLanguage('ee')">EE</button>
+
+<img src="https://flagcdn.com/w40/ru.png" class="flag" onclick="setLanguage('ru')">
+
+<img src="https://flagcdn.com/w40/gb.png" class="flag" onclick="setLanguage('en')">
+
+<img src="https://flagcdn.com/w40/ee.png" class="flag" onclick="setLanguage('ee')">
+
 </div>
 
 </nav>
@@ -111,7 +152,7 @@ margin-top:10px;
 
 function setLanguage(lang){
 
-if(lang === "ru"){
+if(lang==="ru"){
 
 document.getElementById("title").innerText="Клубника в шоколаде"
 document.getElementById("subtitle").innerText="Премиальный десерт ручной работы"
@@ -120,20 +161,26 @@ document.getElementById("p1").innerText="Набор 6 шт"
 document.getElementById("p2").innerText="Набор 12 шт"
 document.getElementById("p3").innerText="Премиум набор"
 
+document.getElementById("home").innerText="Главная"
+document.getElementById("catalog").innerText="Каталог"
+
 }
 
-if(lang === "en"){
+if(lang==="en"){
 
 document.getElementById("title").innerText="Strawberries in Chocolate"
 document.getElementById("subtitle").innerText="Premium handmade dessert"
 
 document.getElementById("p1").innerText="Set of 6"
 document.getElementById("p2").innerText="Set of 12"
-document.getElementById("p3").innerText="Premium Set"
+document.getElementById("p3").innerText="Premium set"
+
+document.getElementById("home").innerText="Home"
+document.getElementById("catalog").innerText="Catalog"
 
 }
 
-if(lang === "ee"){
+if(lang==="ee"){
 
 document.getElementById("title").innerText="Maasikad šokolaadis"
 document.getElementById("subtitle").innerText="Premium käsitöö magustoit"
@@ -141,6 +188,9 @@ document.getElementById("subtitle").innerText="Premium käsitöö magustoit"
 document.getElementById("p1").innerText="6 tk komplekt"
 document.getElementById("p2").innerText="12 tk komplekt"
 document.getElementById("p3").innerText="Premium komplekt"
+
+document.getElementById("home").innerText="Avaleht"
+document.getElementById("catalog").innerText="Kataloog"
 
 }
 
